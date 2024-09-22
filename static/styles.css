@@ -1,0 +1,290 @@
+body {
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #DCDCDC;
+}
+
+/*Greeting at the beginning of the page*/
+.greeting {
+    margin: 0;
+    padding: 110px;
+    background-color: #000;
+    color: mediumseagreen;
+    font-family: 'Roboto Mono';
+    box-sizing: border-box;
+
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 65px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        line-height: .8;
+        padding-top: 50px;
+        margin: 0 0 20px 0;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, .1);
+        border-radius: 4px;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        font-size: 25px;
+        line-height: 1;
+    }
+}
+
+/*Contents the main gallery of the page*/
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+}
+
+.heading {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    padding-top: 50px;
+    padding: 20px;
+    color: #F0FFFF;
+    background-color: rgb(27, 27, 50, .9);
+    border-radius: 10px;
+    width: 35%;
+    height: 20%;
+    margin: auto;
+    margin-top: 15px;
+    border: 7px solid green;
+}
+
+.heading span {
+    color: #228B22;
+}
+
+.description {
+    font-size: 20px;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+/*Gallery Styling*/
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem -1rem;
+}
+
+.gallery-item {
+    flex: 1 0 24rem;
+    margin: 1rem;
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.15);
+}
+
+@supports (display: grid) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 2rem;
+    }
+
+    .gallery,
+    .gallery-item {
+        margin: 0;
+    }
+}
+
+/* Example images Styling */
+.example {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.25rem -0.25rem;
+    justify-content: center;
+}
+
+.example-item-1 {
+    flex: 1 0 4rem;
+    margin: auto;
+    box-sizing: content-box;
+    overflow: hidden;
+
+}
+
+.example-item-2 {
+    flex: 1 0 4rem;
+    margin: auto;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+.example-image-1 {
+    display: flex;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    margin-right: 10px;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+}
+
+.example-image-2 {
+    display: flex;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    margin-left: 20px;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+}
+
+.example-image-1:hover {
+    transform: scale(1.15);
+}
+
+.example-image-2:hover {
+    transform: scale(1.15);
+}
+
+@supports (display: grid) {
+    .example {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+        grid-gap: 0.5rem; 
+    }
+
+    .example,
+    .example-item {
+        margin: auto;
+    }
+}
+
+
+/* Form Styling*/
+.form {
+    font-family: "Montserrat", Arial, sans-serif;
+
+    h2 {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 1;
+        text-align: center;
+        padding-top: 50px;
+        padding: 20px;
+        color: white;
+        background-color: rgb(27, 27, 50, .9);
+        border-radius: 10px;
+        width: 35%;
+        height: 20%;
+        margin: auto;
+        margin-top: 15px;
+        border: 7px solid green;
+        margin-bottom: 20px;
+    }
+    form {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: -10px;
+    }
+
+}
+
+button {
+    background: #2F4F4F;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: black;
+    color: #04ad06;
+}
+
+.file-select {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.file-select::before {
+    background: #2F4F4F;
+    color: white;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-transform: uppercase;
+    content: 'Select local Image';
+}
+
+.file-select:hover::before {
+    background-color: black;
+    color: #04ad06;
+}
+
+.file-select input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/*Footer Styling*/
+.creator {
+    margin: auto;
+    background-color: black;
+    color: mediumseagreen;
+    padding: 60px;
+
+
+    h2  {
+        font-size: 25px;
+        font-weight: 40;
+        letter-spacing: 3px;
+        line-height: .8;
+        padding-top: -20px;
+        margin: auto;
+        margin-top: -20px;
+        background-color: black;
+        border-radius: 4px;
+        color: mediumseagreen;
+        border: none;
+        background: none;
+    }
+}
