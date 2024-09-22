@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+{% block title %}ASCII Art Gallery{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2 class="heading">What does <span>Ascii</span> mean?</h2>
+
+    <!-- ASCII & Website Description -->
+        <div class="description">
+            <p>
+                ASCII (which stands for "American Standard Code for Information Interchange") is a character encoding standard for electronic communication.
+                ASCII codes represent text in computers, telecommunications equipment, and other devices.
+                ASCII has just 128 code points, of which only 95 are printable characters, which severely limit its scope.
+                The set of available punctuation had significant impact on the syntax of computer languages and text markup.
+                ASCII hugely influenced the design of character sets used by modern computers, including Unicode which has over a million code points, but the first 128 of these are the same as ASCII.)
+            </p>
+
+            <p>
+                ASCII characters can be used to create <b>ASCII Art</b>, a technique to create images and various figures using Ascii characters. On this website you will find a gallery filled with
+                Ascii images, as well as a converter to turn any image you want into Ascii Art, hope you find it cool :D !!
+            </p>
+        </div>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img class="gallery-image" src="/static/gallery_images/cat-1.jpg" alt="Cute cat being chill">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="/static/gallery_images/dog-1.jpg" alt="Cute dog being chill">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="/static/gallery_images/ghibli-landscape-1.jpg" alt="Outstanding landscape from a Studio Ghibli Film">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="/static/gallery_images/hedgehog-2.jpg" alt="Cute hedgehog being chill">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="/static/gallery_images/monalisa.jpg" alt="Picture of Leonardo Da Vinci's famous painting">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="/static/gallery_images/starship-2.jpg" alt="Picture of SpaceX Starship">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="/static/gallery_images/sonic-1.jpg" alt="Picture of Classic Sonic">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="/static/gallery_images/men-with-straw-hat.jpg" alt="Picture of Van Gogh's famous painting">
+            </div>
+            <div class="gallery-item">
+                <img class="gallery-image" src="/static/gallery_images/Girl-with-a-Pearl.jpg" alt="Picture of Johannes Vermeer famous painting">
+            </div>
+        </div>
+        <div class="form">
+            <h2>Upload an Image to Convert it to ASCII Art</h2>
+            <div class="example">
+                <div class="example-item-1">
+                    <img class="example-image-1" src="/static/example-images/mario.webp" alt="Example Picture of Mario">
+                </div>
+                <div class="example-item-2">
+                    <img class="example-image-2" src="/static/example-images/mario-ascii.jpg" alt="Example Picture of Mario made up of Ascii Art">
+                </div>
+            </div>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <label for="file">Choose an image file:</label>
+                <div class="file-select">
+                    <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg, .webp, .bmp" required>
+                </div>
+                <button type="submit">Convert to ASCII Art</button>
+            </form>
+        </div>
+    </div>
+    <div class="creator">
+        <footer>
+            <h2>Website made by SolarianAstral</h2>
+        </footer>
+    </div>
+{% endblock %}
